@@ -39,3 +39,29 @@ body{
     height: 350px;
     background-color: blueviolet;
 }
+
+.innerForm{
+    display: flex;
+    gap: 60px;
+}
+
+label{
+    display: block;
+}
+
+input{
+    border: 2px solid aqua;
+    border-radius:5px ;
+}
+
+input:valid{
+    border-color: green;
+}
+
+input:invalid{
+    border-color: red;
+}
+
+.invalid{
+    border-color: red;
+}
