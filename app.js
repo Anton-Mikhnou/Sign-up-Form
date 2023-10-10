@@ -1,10 +1,18 @@
-const password = document.getElementById('password');
-const confirmPassword = document.getElementById('confirm_password');
-const form =document.querySelector('form'); 
-form.addEventListener('submit', function() {
-    if (password.value !== confirmPassword.value) {
+const form = document.querySelector('form'); 
+form.addEventListener('submit', (event) => {
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirm_password');
+
+    let correctPassword = password.value
+    console.log(correctPassword)
+    
+    if (confirmPassword !== confirmPassword.value) {
         confirmPassword.classList.add('invalid')
-        return; 
-    } else confirmPassword.classList.remove('invalid')
-    this.submit(); 
+        event.preventDefault();
+    } else {
+        confirmPassword.classList.remove('invalid')
+        return
+    }
+    console.log(confirmPassword.value)
+
 });

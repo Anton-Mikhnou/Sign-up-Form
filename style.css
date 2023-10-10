@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+@font-face{
+    font-family: Norse-Bold;
+    src: url(./fonts/Norse-Bold\ \(1\).otf);
+}
+
 body{
     display: flex;
     flex-direction: row;
@@ -11,13 +16,18 @@ body{
 .pic{
     width: 35vw;
     height: 100vh;
-    background-color: aqua;
+    background-image: url('imgs/back.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100vw;
     height: 200px;
     background-color: rgb(0, 0, 0, 0.65);
@@ -25,10 +35,18 @@ body{
     bottom: 120px;
 }
 
+.suf{
+    color: white;
+    font-size: 150px;
+    font-family: Norse-Bold;
+    user-select: none;
+    letter-spacing: 15px;
+}
+
 .container{
     width: 65vw;
     height: 100vh;
-    background-color: gray;
+    background-color: #53F4FF;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,7 +55,7 @@ body{
 .form{
     width: 100vw;
     height: 350px;
-    background-color: blueviolet;
+    background-color: white;
 }
 
 .innerForm{
@@ -59,9 +77,5 @@ input:valid{
 }
 
 input:invalid{
-    border-color: red;
-}
-
-.invalid{
     border-color: red;
 }
