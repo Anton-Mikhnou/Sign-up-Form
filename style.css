@@ -1,13 +1,16 @@
-* {
+*{
     margin: 0;
     padding: 0;
 }
 
 @font-face{
-    font-family: Norse-Bold;
-    src: url(./fonts/Norse-Bold\ \(1\).otf);
     font-family: SpaceY;
     src: url(./fonts/SpaceX.ttf);
+}
+
+@font-face{
+    font-family: D-DIN-Bold;
+    src: url(./fonts/FontsFree-Net-D-DIN-Bold-1.ttf);
 }
 
 body{
@@ -77,6 +80,7 @@ body{
 .form{
     width: 100vw;
     height: 350px;
+    margin: 20px;
     border: 2px solid white;
     color: white;
     background-color: black;
@@ -84,8 +88,22 @@ body{
 }
 
 fieldset{
+    display: flex;
+    gap: 60px;
+    margin: 20px;
     border: none;
     display: flex;
+}
+
+.innerForm > div > div{
+    font-family: D-DIN-Bold;
+    margin-top: 10px;
+}
+
+legend{
+    font-family: D-DIN-Bold;
+    font-size: 35px;
+    margin-bottom: 20px;
 }
 
 .innerForm{

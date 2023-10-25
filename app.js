@@ -14,5 +14,4 @@ form.addEventListener('submit', (event) => {
         return
     }
     console.log(confirmPassword.value)
-
 });
