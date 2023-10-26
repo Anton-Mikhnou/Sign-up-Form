@@ -123,7 +123,6 @@ label{
 input{
     font-family: var(--text-family);
     font-size: 15px;
-    border: 2px solid aqua;
     border-radius:5px ;
     height: 25px;
     width: 200px;
@@ -163,7 +162,7 @@ button:before {
 
 input:valid{
     border-color: green;
-}
+} 
 
 input:invalid{
     border-color: red;

@@ -1,17 +1,13 @@
-const form = document.querySelector('form'); 
-form.addEventListener('submit', (event) => {
-    const password = document.getElementById('password');
-    const confirmPassword = document.getElementById('confirm_password');
+const password = document.getElementById("password")
+const confirmPassword = document.getElementById("confirm_password");
 
-    let correctPassword = password.value
-    console.log(correctPassword)
-    
-    if (confirmPassword !== confirmPassword.value) {
-        confirmPassword.classList.add('invalid')
-        event.preventDefault();
+function validatePassword() {
+    if (password.value != confirmPassword.value) {
+    confirmPassword.setCustomValidity("Passwords Don't Match");
     } else {
-        confirmPassword.classList.remove('invalid')
-        return
+    confirmPassword.setCustomValidity("");
     }
-    console.log(confirmPassword.value)
-});
+}
+
+password.onchange = validatePassword;
+confirmPassword.onkeyup = validatePassword;
